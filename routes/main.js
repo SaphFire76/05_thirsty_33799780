@@ -37,7 +37,15 @@ router.get("/register", (req,res) => {
 // Handles the input received by the form in the 'register' route. 
 router.post("/registered", (req,res) => { 
   res.send('Hello '+ req.body.first + ' '+ req.body.last +', you are now registered! We will send an email to you at ' + req.body.email + '.') 
-}); 
+});
+
+router.get("/survey", (req,res) => {
+    res.render("survey.ejs",  shopData); 
+});
+
+// router.post("/survey", (req,res) => {
+//     res.send('') 
+// });
 
 
 // Export the router object so index.js can access it
