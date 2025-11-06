@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%=shopName%></title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <h1>About <%=shopName%></h1>
+    <p>We sell all sorts of drinks</p>
+    <div id="Locations">
+        <h3>Our Locations:</h3>
+        <table>
+            <tr>
+                <th>Locations</th>
+                <th>Managers</th>
+            </tr>
+            <% for(let i = 0; i < shopLocations.length; i++){ %>
+                <tr>
+                    <th><%=shopLocations[i]%></th>
+                    <th><%=shopManagers[i]%></th>
+                </tr>
+            <% } %>
+        </table>
+    </div>
+  </body>
+</html>
